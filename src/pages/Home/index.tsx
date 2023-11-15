@@ -2,12 +2,12 @@ import { memo } from "react";
 // Material UI
 import { Box, Grid, Typography } from "@mui/material";
 // Components
-import CategorySidebar from "@components/pages/Home/CategorySidebar";
+import CategorySidebar from "./components/CategorySidebar";
 import ProductList from "@features/Products/components/ProductList";
-import SearchForm from "@components/pages/Home/SearchForm";
-import CartSidebar from "@components/pages/Home/CartSidebar";
-import ThankyouModal from "@components/pages/Home/ThankyouModal";
-import SortButton from "@components/pages/Home/SortButton";
+import SearchForm from "./components/SearchForm";
+import CartSidebar from "./components/CartSidebar";
+import ThankyouModal from "./components/ThankyouModal";
+import SortButton from "./components/SortButton";
 // Router
 import { useSearchParams } from "react-router-dom";
 // Types
