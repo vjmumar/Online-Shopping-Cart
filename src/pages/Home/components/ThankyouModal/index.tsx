@@ -15,7 +15,7 @@ const ThankyouModal = () => {
 				variant="h5"
 				sx={{
 					fontSize: {
-						lg: "unset",
+						lg: "23px",
 						xs: "20px",
 					},
 				}}

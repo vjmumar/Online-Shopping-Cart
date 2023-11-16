@@ -16,7 +16,7 @@ const cart = createSlice({
 				(product) => product.id === payload.cartProduct?.id,
 			);
 			/**
-			 * If it already exist inside the cart we will jsut gonna
+			 * If it already exist inside the cart we will just gonna
 			 * increment the quantity of the product.
 			 */
 			if (isProductALreadyInTheCart) {
