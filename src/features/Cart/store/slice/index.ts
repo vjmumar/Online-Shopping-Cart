@@ -24,6 +24,11 @@ const cart = createSlice({
 					(product) => {
 						if (product.id === payload.cartProduct?.id) {
 							product.quantity = ++product.quantity;
+							product.unitPrice = Number(
+								(product.unitPrice * product.quantity).toFixed(
+									2,
+								),
+							);
 						}
 						return product;
 					},

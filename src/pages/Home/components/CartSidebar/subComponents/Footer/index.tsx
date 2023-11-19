@@ -23,11 +23,13 @@ const CartSidebarFooter = () => {
 	};
 
 	const totalAmount = useMemo(() => {
-		return cartProducts.items.reduce((a, c) => {
-			a += c.unitPrice * c.quantity;
+		return cartProducts.items
+			.reduce((a, c) => {
+				a += c.unitPrice;
 
-			return a;
-		}, 0);
+				return a;
+			}, 0)
+			.toFixed(2);
 	}, [cartProducts]);
 
 	return (
@@ -67,7 +69,7 @@ const CartSidebarFooter = () => {
 			>
 				<Typography fontWeight={"500"}>Total Amount</Typography>
 				<Typography fontWeight={"500"} variant={"h5"} color="red">
-					₱{totalAmount.toFixed(2)}
+					₱{totalAmount}
 				</Typography>
 			</Box>
 			<Button
