@@ -25,7 +25,7 @@ const cart = createSlice({
 						if (product.id === payload.cartProduct?.id) {
 							product.quantity = ++product.quantity;
 							product.unitPrice = Number(
-								(product.unitPrice * product.quantity).toFixed(
+								(product.origPrice * product.quantity).toFixed(
 									2,
 								),
 							);
@@ -44,6 +44,9 @@ const cart = createSlice({
 			state.cartProducts.items.map((product) => {
 				if (product.id === payload.cartProductId) {
 					product.quantity = payload.cartProductQuantity as number;
+					product.unitPrice = Number(
+						(product.origPrice * product.quantity).toFixed(2),
+					);
 				}
 
 				return product;

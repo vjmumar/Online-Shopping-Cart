@@ -50,6 +50,7 @@ const ProductList = ({ category, sortBy, search }: IProps) => {
 					productName: product?.productName,
 					quantity: 1,
 					unitPrice: product?.unitPrice,
+					origPrice: product?.unitPrice,
 				},
 			}),
 		);

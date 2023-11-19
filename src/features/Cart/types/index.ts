@@ -8,5 +8,6 @@ export type TCartProduct = {
 	productName: string;
 	id: string;
 	unitPrice: number;
+	origPrice: number;
 	imageUrl: string;
 };
